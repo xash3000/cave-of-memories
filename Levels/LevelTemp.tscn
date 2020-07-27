@@ -47,4 +47,3 @@ position = Vector2( 336, 240 )
 position = Vector2( 208, 336 )
 
 [node name="FadeOut" parent="." instance=ExtResource( 5 )]
-visible = false

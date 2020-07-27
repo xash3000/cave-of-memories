@@ -5,6 +5,7 @@ export var v = Vector2(1, 0)
 var velocity = Vector2.ZERO
 var FLOOR_NORMAL = Vector2.UP
 onready var sp = $Sprite
+onready var sfx = $SFX
 
 func _ready() -> void:
 	velocity.x = v.x * speed
@@ -27,4 +28,12 @@ func _on_BulletDetector_body_entered(body: Node) -> void:
 		die()
 
 func die():
+	sfx.play()
+	var t = Timer.new()
+	t.set_wait_time(0.5)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
 	queue_free()

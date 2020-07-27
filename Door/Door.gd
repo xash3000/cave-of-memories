@@ -6,7 +6,9 @@ onready var sprite = $Sprite
 
 
 func _on_body_entered(body: Node) -> void:
+	$OpenDoorSound.play()
 	sprite.set_texture(opened)
 
 func _on_body_exited(body: Node) -> void:
+	$CloseDoorSound.play()
 	sprite.set_texture(closed)
