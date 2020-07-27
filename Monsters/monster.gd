@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_BulletDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Bullet.tscn'):
+		body.queue_free()
 		die()
 
 func die():
