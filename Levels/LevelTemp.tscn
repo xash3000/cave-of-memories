@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Monsters/Snake.tscn" type="PackedScene" id=3]
 
 [node name="LevelTemp" type="Node2D"]
 __meta__ = {
@@ -19,8 +20,18 @@ tile_data = PoolIntArray( 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 1, 0
 [node name="on-top" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 15
 format = 1
 tile_data = PoolIntArray( 327709, 2, 0, 1245219, 2, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 208, 336 )
+
+[node name="Monsters" type="Node2D" parent="."]
+
+[node name="Snake" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 624, 176 )
+
+[node name="Snake2" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 944, 368 )

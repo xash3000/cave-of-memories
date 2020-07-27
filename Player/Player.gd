@@ -45,5 +45,16 @@ func _physics_process(delta: float) -> void:
 func shoot() -> void:
 	var _v = v[dir]
 	var bullet = bullet_scene.instance()
+	var lvl = get_tree().get_root().get_node("LevelTemp")
 	bullet.init(_v.x, _v.y)
-	add_child(bullet)
+	add_child_below_node(lvl, bullet)
+
+
+func _on_EnemyDetector_body_entered(body: Node) -> void:
+	print(body.filename)
+	if body.filename.ends_with("Snake.tscn"):
+		print("DYING")
+		die()
+		
+func die():
+	get_tree().reload_current_scene()
