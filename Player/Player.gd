@@ -11,6 +11,7 @@ var v = {
 	"up": Vector2(0, -1),
 	"down": Vector2(0, 1)
 }
+signal piece(id)
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):
@@ -53,9 +54,14 @@ func shoot() -> void:
 
 
 func _on_EnemyDetector_body_entered(body: Node) -> void:
-	if body.filename.ends_with("Snake.tscn"):
-		print("DYING")
+	if body.filename.ends_with('Snake.tscn'):
 		die()
 		
 func die():
 	get_tree().reload_current_scene()
+
+
+func _on_PieceDetector_body_entered(body: Node) -> void:
+	if body.filename.ends_with('Piece.tscn'):
+		body.queue_free()
+		emit_signal('piece', body.get('id'))
