@@ -17,7 +17,7 @@ func _on_NextLevelDoor_body_entered(body: Node) -> void:
 	if collected < 9:
 		get_node('UI/warn').visible = true
 	else:
-		pass #goto next level
+		get_tree().change_scene_to(next_scene)
 
 
 func _on_NextLevelDoor_body_exited(body: Node) -> void:

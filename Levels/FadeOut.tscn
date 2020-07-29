@@ -21,7 +21,7 @@ tracks/0/keys = {
 margin_right = 40.0
 margin_bottom = 40.0
 rect_scale = Vector2( 32.1733, 18.1528 )
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

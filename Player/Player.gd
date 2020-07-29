@@ -64,4 +64,5 @@ func die():
 func _on_PieceDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Piece.tscn'):
 		body.queue_free()
+		get_node('pickup').play()
 		emit_signal('piece', body.get('id'))
