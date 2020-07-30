@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Piece/Piece.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/LevelTempEnding.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player/Apple.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/Torch.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Levels/LevelTemp.gd" type="Script" id=16]
 [ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://Assets/Tiles/stone_stairs_down.png" type="Texture" id=18]
@@ -293,6 +294,17 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 208, 336 )
+
+[node name="torches" type="Node2D" parent="."]
+
+[node name="Torch" parent="torches" instance=ExtResource( 9 )]
+position = Vector2( 376, 504 )
+
+[node name="Torch3" parent="torches" instance=ExtResource( 9 )]
+position = Vector2( 144, 496 )
+
+[node name="Torch2" parent="torches" instance=ExtResource( 9 )]
+position = Vector2( 1040, 880 )
 [connection signal="body_entered" from="NextLevelDoor" to="." method="_on_NextLevelDoor_body_entered"]
 [connection signal="body_exited" from="NextLevelDoor" to="." method="_on_NextLevelDoor_body_exited"]
 [connection signal="piece" from="Player" to="." method="_on_Player_piece"]
