@@ -5,24 +5,24 @@
 [ext_resource path="res://Assets/SFX/close_door.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/SFX/open_door.wav" type="AudioStream" id=4]
 
-[sub_resource type="OccluderPolygon2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -16, -16, 0, -16, 16, -16, 16, 16, -16, 16 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 16 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 24 )
 
 [node name="Door" type="Area2D"]
+collision_layer = 2147483649
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="OpenDoorSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )

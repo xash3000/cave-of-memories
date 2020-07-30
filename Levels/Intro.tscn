@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Fonts/title-font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Assets/UI/start-normal.png" type="Texture" id=4]
 [ext_resource path="res://Levels/Intro.gd" type="Script" id=5]
-[ext_resource path="res://Levels/LevelTemp.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Level-1/level-1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/UI/enternance.jpg" type="Texture" id=7]
 
 [node name="Intro" type="Node2D"]

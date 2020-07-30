@@ -249,11 +249,12 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=40]
-extents = Vector2( 8, 15.3635 )
+extents = Vector2( 8, 12 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 6
 script = ExtResource( 2 )
+speed = 162
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0, 7.45061 )
@@ -264,16 +265,18 @@ mode = 3
 [node name="PieceDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PieceDetector"]
+visible = false
 shape = SubResource( 1 )
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+visible = false
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 39 )
-animation = "idle-down"
+animation = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 40 )
