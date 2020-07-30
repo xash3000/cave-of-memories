@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Monsters/monster-3.png" type="Texture" id=1]
 [ext_resource path="res://Monsters/Snake.gd" type="Script" id=2]
 [ext_resource path="res://Assets/SFX/monster-death.wav" type="AudioStream" id=3]
+[ext_resource path="res://Player/HealthBar.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -30,4 +31,11 @@ shape = SubResource( 2 )
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 volume_db = 1.0
+
+[node name="HealthBar" parent="." instance=ExtResource( 4 )]
+margin_left = -16.0
+margin_top = -24.0
+margin_right = -16.0
+margin_bottom = -24.0
+[connection signal="health" from="." to="HealthBar" method="_on_health_update"]
 [connection signal="body_entered" from="BulletDetector" to="." method="_on_BulletDetector_body_entered"]

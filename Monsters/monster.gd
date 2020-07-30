@@ -7,6 +7,8 @@ var velocity = Vector2.ZERO
 var FLOOR_NORMAL = Vector2.UP
 onready var sp = $Sprite
 onready var sfx = $SFX
+export var hp = 100
+signal health(amount)
 
 func _ready() -> void:
 	velocity.x = v.x * speed
@@ -25,11 +27,14 @@ func _physics_process(delta: float) -> void:
 
 func _on_BulletDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Bullet.tscn'):
+		sfx.play()
 		body.queue_free()
-		die()
+		hp -= body.get('damage')
+		if hp <= 0:
+			die()
+		emit_signal('health', hp)
 
 func die():
-	sfx.play()
 	var t = Timer.new()
 	t.set_wait_time(0.5)
 	t.set_one_shot(true)
