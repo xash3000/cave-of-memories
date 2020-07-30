@@ -11,16 +11,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bar" type="TextureProgress" parent="."]
+[node name="BarUnder" type="TextureProgress" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 value = 100.0
 texture_under = ExtResource( 1 )
 texture_over = ExtResource( 3 )
 texture_progress = ExtResource( 2 )
+tint_progress = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarOver" type="TextureProgress" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 2 )
+tint_under = Color( 1, 1, 1, 0 )
 tint_progress = Color( 0, 1, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="UpdateTween" type="Tween" parent="."]
+
+[node name="PulseTween" type="Tween" parent="."]
+repeat = true
+playback/repeat = true

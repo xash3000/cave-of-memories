@@ -13,7 +13,7 @@ var v = {
 }
 signal piece(id)
 signal health(amount)
-signal max_health()
+signal max_health(amount)
 export var hp = 100
 
 func _physics_process(delta: float) -> void:
@@ -59,8 +59,11 @@ func shoot() -> void:
 func _on_EnemyDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Snake.tscn'):
 		hp -= body.get('damage')
+		$SFX/hurt.play()
 		if hp <= 0:
 			die()
+		elif hp < 30:
+			$SFX/pulse.play()
 		emit_signal('health', hp)
 		
 func die():
@@ -70,5 +73,12 @@ func die():
 func _on_PieceDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Piece.tscn'):
 		body.queue_free()
-		get_node('pickup').play()
+		$SFX/pickup.play()
 		emit_signal('piece', body.get('id'))
+	if body.filename.ends_with('Apple.tscn'):
+		print(body.filename)
+		hp = 100
+		body.queue_free()
+		$SFX/pickup.play()
+		$SFX/pulse.stop()
+		emit_signal('max_health', 100)
