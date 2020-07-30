@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var speed = 192
 export var v = Vector2(1, 0)
+export var damage = 60
 var velocity = Vector2.ZERO
 var FLOOR_NORMAL = Vector2.UP
 onready var sp = $Sprite

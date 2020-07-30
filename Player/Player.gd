@@ -12,6 +12,9 @@ var v = {
 	"down": Vector2(0, 1)
 }
 signal piece(id)
+signal health(amount)
+signal max_health()
+export var hp = 100
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):
@@ -55,7 +58,10 @@ func shoot() -> void:
 
 func _on_EnemyDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Snake.tscn'):
-		die()
+		hp -= body.get('damage')
+		if hp <= 0:
+			die()
+		emit_signal('health', hp)
 		
 func die():
 	get_tree().reload_current_scene()

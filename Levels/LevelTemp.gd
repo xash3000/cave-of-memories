@@ -3,7 +3,6 @@ extends Node2D
 var collected = 0
 export var next_scene: PackedScene
 
-
 func _on_Player_piece(id) -> void:
 	get_node('UI/p' + id).visible = true
 	collected += 1

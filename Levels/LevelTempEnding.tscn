@@ -27,7 +27,7 @@ margin_left = 256.0
 margin_top = 232.0
 margin_right = 1416.0
 margin_bottom = 1512.0
-rect_scale = Vector2( 0.258831, 0.296449 )
+rect_scale = Vector2( 0.258831, 0.256449 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,15 +53,16 @@ margin_bottom = 210.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "caption"
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="page-2-text" type="Label" parent="CanvasLayer"]
-margin_left = 704.0
+margin_left = 688.0
 margin_top = 248.0
-margin_right = 780.0
-margin_bottom = 262.0
+margin_right = 1133.0
+margin_bottom = 407.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "\"This is a very special picture to me as it's

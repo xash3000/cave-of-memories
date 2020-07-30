@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Assets/Player/rpg_sprite_walk.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Assets/UI/fire-normal.png" type="Texture" id=12]
 [ext_resource path="res://Assets/SFX/desert-music.ogg" type="AudioStream" id=13]
 [ext_resource path="res://Assets/SFX/pickup.wav" type="AudioStream" id=14]
+[ext_resource path="res://Player/HealthBar.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 18 )
@@ -318,5 +319,13 @@ autoplay = true
 [node name="pickup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )
 volume_db = 10.0
+
+[node name="HealthBar" parent="." instance=ExtResource( 15 )]
+margin_left = -16.0
+margin_top = -24.0
+margin_right = -16.0
+margin_bottom = -24.0
+[connection signal="health" from="." to="HealthBar" method="_on_health_update"]
+[connection signal="max_health" from="." to="HealthBar" method="_on_max_health"]
 [connection signal="body_entered" from="PieceDetector" to="." method="_on_PieceDetector_body_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
