@@ -10,6 +10,7 @@ onready var sfx = $SFX
 export var hp = 100
 signal health(amount)
 
+
 func _ready() -> void:
 	velocity.x = v.x * speed
 	velocity.y = v.y * speed
@@ -26,7 +27,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_BulletDetector_body_entered(body: Node) -> void:
-	if body.filename.ends_with('Bullet.tscn'):
+	if body.filename.ends_with('Bullet.tscn') and not body.filename.count('Enemy'):
 		sfx.play()
 		body.queue_free()
 		hp -= body.get('damage')

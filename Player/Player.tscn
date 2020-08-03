@@ -265,13 +265,11 @@ mode = 3
 [node name="PieceDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PieceDetector"]
-visible = false
 shape = SubResource( 1 )
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
-visible = false
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -350,7 +348,6 @@ stream = ExtResource( 17 )
 volume_db = 5.0
 
 [node name="HealthBar" parent="." instance=ExtResource( 15 )]
-visible = false
 margin_left = -16.0
 margin_top = -24.0
 margin_right = -16.0

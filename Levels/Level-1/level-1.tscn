@@ -97,6 +97,34 @@ damage = 30
 position = Vector2( 1872, 472 )
 damage = 30
 
+[node name="Monsters2" type="Node2D" parent="."]
+
+[node name="Snake" parent="Monsters2" instance=ExtResource( 19 )]
+position = Vector2( 288, 1496 )
+v = Vector2( 0, 1 )
+damage = 30
+
+[node name="Snake2" parent="Monsters2" instance=ExtResource( 19 )]
+position = Vector2( 1104, 1136 )
+v = Vector2( 0, 1 )
+damage = 30
+
+[node name="Snake3" parent="Monsters2" instance=ExtResource( 19 )]
+position = Vector2( 1648, 992 )
+damage = 30
+
+[node name="Snake4" parent="Monsters2" instance=ExtResource( 19 )]
+position = Vector2( 2288, 848 )
+damage = 30
+
+[node name="Snake5" parent="Monsters2" instance=ExtResource( 19 )]
+position = Vector2( 2288, 848 )
+damage = 30
+
+[node name="Snake6" parent="Monsters2" instance=ExtResource( 19 )]
+position = Vector2( 1872, 472 )
+damage = 30
+
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource( 21 )]
