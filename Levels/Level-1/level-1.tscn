@@ -5,15 +5,15 @@
 [ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Levels/Level-1/level-1-ending.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Tiles/stone_stairs_down.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/6.jpg" type="Texture" id=6]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/1.jpg" type="Texture" id=7]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/5.jpg" type="Texture" id=8]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/4.jpg" type="Texture" id=9]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/8.jpg" type="Texture" id=10]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/0.jpg" type="Texture" id=11]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/2.jpg" type="Texture" id=12]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/3.jpg" type="Texture" id=13]
-[ext_resource path="res://Assets/Pieces/sarah level 1/_resized/7.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/Pieces/level-1/m/0.jpg" type="Texture" id=6]
+[ext_resource path="res://Assets/Pieces/level-1/m/1.jpg" type="Texture" id=7]
+[ext_resource path="res://Assets/Pieces/level-1/m/5.jpg" type="Texture" id=8]
+[ext_resource path="res://Assets/Pieces/level-1/m/7.jpg" type="Texture" id=9]
+[ext_resource path="res://Assets/Pieces/level-1/m/8.jpg" type="Texture" id=10]
+[ext_resource path="res://Assets/Pieces/level-1/m/3.jpg" type="Texture" id=11]
+[ext_resource path="res://Assets/Pieces/level-1/m/4.jpg" type="Texture" id=12]
+[ext_resource path="res://Assets/Pieces/level-1/m/2.jpg" type="Texture" id=13]
+[ext_resource path="res://Assets/Pieces/level-1/m/6.jpg" type="Texture" id=14]
 [ext_resource path="res://Levels/Level.gd" type="Script" id=15]
 [ext_resource path="res://Piece/Piece.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Player/Apple.tscn" type="PackedScene" id=17]
@@ -165,7 +165,7 @@ rotation = 1.57079
 [node name="Piece1" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 512, 368 )
 id = "1"
-asset = ExtResource( 11 )
+asset = ExtResource( 6 )
 
 [node name="Piece2" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 1152, 968 )
@@ -175,17 +175,17 @@ asset = ExtResource( 7 )
 [node name="Piece3" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 352, 800 )
 id = "3"
-asset = ExtResource( 12 )
+asset = ExtResource( 13 )
 
 [node name="Piece4" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 272, 1808 )
 id = "4"
-asset = ExtResource( 13 )
+asset = ExtResource( 11 )
 
 [node name="Piece5" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 1192, 1312 )
 id = "5"
-asset = ExtResource( 9 )
+asset = ExtResource( 12 )
 
 [node name="Piece6" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 1736, 920 )
@@ -195,12 +195,12 @@ asset = ExtResource( 8 )
 [node name="Piece7" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 2504, 784 )
 id = "7"
-asset = ExtResource( 6 )
+asset = ExtResource( 14 )
 
 [node name="Piece8" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 744, 808 )
 id = "8"
-asset = ExtResource( 14 )
+asset = ExtResource( 9 )
 
 [node name="Piece9" parent="pieces" instance=ExtResource( 16 )]
 position = Vector2( 1200, 1512 )
@@ -219,7 +219,7 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 11 )
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -241,7 +241,7 @@ margin_left = 128.0
 margin_right = 168.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -252,7 +252,7 @@ margin_top = 64.0
 margin_right = 40.0
 margin_bottom = 104.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -264,7 +264,7 @@ margin_top = 64.0
 margin_right = 104.0
 margin_bottom = 104.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -287,7 +287,7 @@ margin_top = 128.0
 margin_right = 40.0
 margin_bottom = 168.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 6 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -299,7 +299,7 @@ margin_top = 128.0
 margin_right = 104.0
 margin_bottom = 168.0
 rect_scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

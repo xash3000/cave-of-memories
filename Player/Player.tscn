@@ -148,7 +148,7 @@ region = Rect2( 168, 32, 24, 32 )
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 96, 24, 32 )
+region = Rect2( 0, 64, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
@@ -193,7 +193,7 @@ region = Rect2( 168, 0, 24, 32 )
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 24, 32 )
+region = Rect2( 0, 96, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
@@ -224,7 +224,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 27 ) ],
 "loop": false,
-"name": "idle-right",
+"name": "idle-left",
 "speed": 0.0
 }, {
 "frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
@@ -234,7 +234,7 @@ animations = [ {
 }, {
 "frames": [ SubResource( 36 ) ],
 "loop": false,
-"name": "idle-left",
+"name": "idle-right",
 "speed": 0.0
 }, {
 "frames": [ SubResource( 37 ) ],
@@ -254,7 +254,7 @@ extents = Vector2( 8, 12 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 6
 script = ExtResource( 2 )
-speed = 162
+speed = 250
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0, 7.45061 )
@@ -348,14 +348,15 @@ stream = ExtResource( 17 )
 volume_db = 5.0
 
 [node name="HealthBar" parent="." instance=ExtResource( 15 )]
+visible = false
 margin_left = -16.0
 margin_top = -24.0
 margin_right = -16.0
 margin_bottom = -24.0
 will_pluse = true
-[connection signal="health" from="." to="UI/HealthBar" method="_on_health_update"]
 [connection signal="health" from="." to="HealthBar" method="_on_health_update"]
-[connection signal="max_health" from="." to="UI/HealthBar" method="_on_max_health"]
+[connection signal="health" from="." to="UI/HealthBar" method="_on_health_update"]
 [connection signal="max_health" from="." to="HealthBar" method="_on_max_health"]
+[connection signal="max_health" from="." to="UI/HealthBar" method="_on_max_health"]
 [connection signal="body_entered" from="PieceDetector" to="." method="_on_PieceDetector_body_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Pieces/sarah level 2/_resized/5.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/Pieces/level-5/s/7.jpg" type="Texture" id=1]
 [ext_resource path="res://Piece/Piece.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Pieces/wooden-pressed-frame---jfd.png" type="Texture" id=3]
 
