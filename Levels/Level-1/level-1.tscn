@@ -374,25 +374,21 @@ visible = false
 position = Vector2( 144, 368 )
 
 [node name="torches" type="Node2D" parent="."]
+visible = false
 
 [node name="Torch" parent="torches" instance=ExtResource( 18 )]
-visible = false
 position = Vector2( 528, 1128 )
 
 [node name="Torch3" parent="torches" instance=ExtResource( 18 )]
-visible = false
 position = Vector2( 537.138, 1488 )
 
 [node name="Torch2" parent="torches" instance=ExtResource( 18 )]
-visible = false
 position = Vector2( 1112, 1240 )
 
 [node name="Torch4" parent="torches" instance=ExtResource( 18 )]
-visible = false
 position = Vector2( 1504, 1272 )
 
 [node name="Torch5" parent="torches" instance=ExtResource( 18 )]
-visible = false
 position = Vector2( 2368, 624 )
 [connection signal="body_entered" from="NextLevelDoor" to="." method="_on_NextLevelDoor_body_entered"]
 [connection signal="body_exited" from="NextLevelDoor" to="." method="_on_NextLevelDoor_body_exited"]
