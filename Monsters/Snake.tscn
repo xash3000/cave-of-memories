@@ -37,5 +37,7 @@ margin_left = -16.0
 margin_top = -24.0
 margin_right = -16.0
 margin_bottom = -24.0
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 [connection signal="health" from="." to="HealthBar" method="_on_health_update"]
 [connection signal="body_entered" from="BulletDetector" to="." method="_on_BulletDetector_body_entered"]

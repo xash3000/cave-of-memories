@@ -44,7 +44,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed('ui_accept'):
 		shoot()
 		
-	velocity = move_and_slide_with_snap(velocity, Vector2(0, -1), Vector2(0, 32))
+	velocity = move_and_slide(velocity, Vector2(0, -1))
+	position = position.round()
 
 func shoot() -> void:
 	var _v = v[dir]

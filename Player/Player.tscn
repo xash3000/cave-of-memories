@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Assets/Player/rpg_sprite_walk.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -17,13 +17,6 @@
 [ext_resource path="res://Player/HealthBar.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/SFX/hurt.wav" type="AudioStream" id=16]
 [ext_resource path="res://Assets/SFX/pulse.ogg" type="AudioStream" id=17]
-[ext_resource path="res://Assets/Texture/2DLight.png" type="Texture" id=18]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12, 18 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -148,7 +141,7 @@ region = Rect2( 168, 32, 24, 32 )
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 24, 32 )
+region = Rect2( 0, 96, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
@@ -158,52 +151,52 @@ region = Rect2( 0, 0, 24, 32 )
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 24, 0, 24, 32 )
+region = Rect2( 0, 32, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 24, 32 )
+region = Rect2( 0, 64, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 72, 0, 24, 32 )
+region = Rect2( 0, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 24, 32 )
+region = Rect2( 24, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 120, 0, 24, 32 )
+region = Rect2( 48, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 24, 32 )
+region = Rect2( 72, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 168, 0, 24, 32 )
+region = Rect2( 96, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 96, 24, 32 )
+region = Rect2( 120, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=37]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 32 )
+region = Rect2( 144, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=38]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 32, 24, 32 )
+region = Rect2( 168, 0, 24, 32 )
 
 [sub_resource type="SpriteFrames" id=39]
 animations = [ {
@@ -224,53 +217,43 @@ animations = [ {
 }, {
 "frames": [ SubResource( 27 ) ],
 "loop": false,
-"name": "idle-left",
-"speed": 0.0
-}, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
-"loop": true,
-"name": "down",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 36 ) ],
-"loop": false,
 "name": "idle-right",
 "speed": 0.0
 }, {
-"frames": [ SubResource( 37 ) ],
+"frames": [ SubResource( 28 ) ],
 "loop": false,
 "name": "idle-down",
 "speed": 0.0
 }, {
-"frames": [ SubResource( 38 ) ],
+"frames": [ SubResource( 29 ) ],
 "loop": false,
 "name": "idle-up",
 "speed": 0.0
+}, {
+"frames": [ SubResource( 30 ) ],
+"loop": false,
+"name": "idle-left",
+"speed": 0.0
+}, {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": true,
+"name": "down",
+"speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=40]
-extents = Vector2( 8, 12 )
+extents = Vector2( 6, 12 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 18 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 16 )
 
 [node name="Player" type="KinematicBody2D"]
-collision_mask = 6
+collision_mask = 50
 script = ExtResource( 2 )
 speed = 250
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 0, 7.45061 )
-scale = Vector2( 5, 1.0291 )
-texture = ExtResource( 18 )
-mode = 3
-
-[node name="PieceDetector" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PieceDetector"]
-shape = SubResource( 1 )
-
-[node name="EnemyDetector" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
-shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 39 )
@@ -279,10 +262,24 @@ animation = "right"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 40 )
 
+[node name="PieceDetector" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PieceDetector"]
+shape = SubResource( 1 )
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+shape = SubResource( 2 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.6, 0.6 )
+limit_smoothed = true
 smoothing_enabled = true
+smoothing_speed = 20.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -354,9 +351,9 @@ margin_top = -24.0
 margin_right = -16.0
 margin_bottom = -24.0
 will_pluse = true
-[connection signal="health" from="." to="HealthBar" method="_on_health_update"]
 [connection signal="health" from="." to="UI/HealthBar" method="_on_health_update"]
-[connection signal="max_health" from="." to="HealthBar" method="_on_max_health"]
+[connection signal="health" from="." to="HealthBar" method="_on_health_update"]
 [connection signal="max_health" from="." to="UI/HealthBar" method="_on_max_health"]
+[connection signal="max_health" from="." to="HealthBar" method="_on_max_health"]
 [connection signal="body_entered" from="PieceDetector" to="." method="_on_PieceDetector_body_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

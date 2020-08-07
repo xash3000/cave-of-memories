@@ -16,7 +16,9 @@ func _ready() -> void:
 	velocity.y = v.y * speed
 
 func _physics_process(delta: float) -> void:
-	
+	#var col = move_and_collide(velocity * delta)
+	#if col:
+	#	velocity = velocity.bounce(col.normal)
 	if is_on_floor() or is_on_ceiling():
 		velocity.y *= -1
 	if is_on_wall():
