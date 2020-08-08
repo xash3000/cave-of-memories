@@ -58,6 +58,7 @@ func shoot() -> void:
 
 # refactor this function
 func _on_EnemyDetector_body_entered(body: Node) -> void:
+	print(body.filename)
 	if body.filename.ends_with('Snake.tscn') or body.filename.ends_with('EnemyBullet.tscn') or body.filename.ends_with('Dragon.tscn'):
 		hp -= body.get('damage')
 		$SFX/hurt.play()
