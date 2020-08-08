@@ -382,9 +382,6 @@ position = Vector2( 528, 1128 )
 [node name="Torch3" parent="torches" instance=ExtResource( 18 )]
 position = Vector2( 537.138, 1488 )
 
-[node name="Torch2" parent="torches" instance=ExtResource( 18 )]
-position = Vector2( 1112, 1240 )
-
 [node name="Torch4" parent="torches" instance=ExtResource( 18 )]
 position = Vector2( 1504, 1272 )
 

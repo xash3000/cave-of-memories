@@ -29,13 +29,16 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_BulletDetector_body_entered(body: Node) -> void:
-	if body.filename.ends_with('Bullet.tscn') and not body.filename.count('Enemy'):
-		sfx.play()
-		body.queue_free()
-		hp -= body.get('damage')
-		if hp <= 0:
-			die()
-		emit_signal('health', hp)
+	if body.get_name() == "Bullet":
+		hit(body)
+		
+func hit(body):
+	sfx.play()
+	body.queue_free()
+	hp -= body.get('damage')
+	if hp <= 0:
+		die()
+	emit_signal('health', hp)
 
 func die():
 	var t = Timer.new()

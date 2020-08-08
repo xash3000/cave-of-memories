@@ -56,18 +56,20 @@ func shoot() -> void:
 	bullet.position = position
 	add_child(bullet)
 
-# refactor this function
 func _on_EnemyDetector_body_entered(body: Node) -> void:
 	print(body.filename)
-	if body.filename.ends_with('Snake.tscn') or body.filename.ends_with('EnemyBullet.tscn') or body.filename.ends_with('Dragon.tscn'):
-		hp -= body.get('damage')
-		$SFX/hurt.play()
-		if hp <= 0:
-			die()
-		elif hp < 30:
-			$SFX/pulse.play()
-		emit_signal('health', hp)
-		
+	for enemy in ["Snake.tscn", "Dragon.tscn", "EnemyBullet.tscn"]:
+		if body.filename.ends_with(enemy):
+			hit(body)
+
+func hit(body):
+	hp -= body.get('damage')
+	$SFX/hurt.play()
+	if hp <= 0:
+		die()
+	elif hp < 30:
+		$SFX/pulse.play()
+	emit_signal('health', hp)		
 func die():
 	get_tree().reload_current_scene()
 

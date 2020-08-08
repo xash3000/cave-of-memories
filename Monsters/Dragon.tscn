@@ -12,7 +12,7 @@ extents = Vector2( 16, 16 )
 extents = Vector2( 16, 16 )
 
 [node name="Dragon" type="KinematicBody2D"]
-collision_layer = 2147483649
+collision_layer = 2147483652
 collision_mask = 2
 script = ExtResource( 2 )
 

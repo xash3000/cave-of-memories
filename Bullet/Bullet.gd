@@ -15,5 +15,6 @@ func _physics_process(delta: float) -> void:
 	var col = move_and_collide(velocity * delta)
 
 	if col:
+		if col.collider.get_name() in ["Snake"]:
+			col.collider.get_script().call("hit")
 		queue_free()
-	

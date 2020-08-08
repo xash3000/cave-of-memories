@@ -19,6 +19,11 @@ config/name="Cave Of Memories"
 run/main_scene="res://Levels/Intro.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+gdscript/warnings/unassigned_variable=false
+gdscript/warnings/unused_variable=false
+
 [display]
 
 window/size/width=1280
@@ -68,6 +73,9 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_2="walls"
 2d_physics/layer_3="monsters"
 2d_physics/layer_4="bullets"
+2d_physics/layer_5="pickups"
+2d_physics/layer_6="doors"
+2d_physics/layer_7="bullet-monster"
 
 [rendering]
 
