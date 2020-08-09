@@ -28,8 +28,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide(velocity, FLOOR_NORMAL)
 
 
-func _on_BulletDetector_body_entered(body: Node) -> void:
-	if body.get_name() == "Bullet":
+func _on_BulletDetector_body_entered(body_id: int, body: Node, _discard, _discard2) -> void:
+	if body.filename.ends_with("Bullet.tscn"):
+		if "Enemy" in body.filename:
+			return
 		hit(body)
 		
 func hit(body):

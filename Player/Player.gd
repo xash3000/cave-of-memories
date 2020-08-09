@@ -14,7 +14,12 @@ var v = {
 signal piece(id)
 signal health(amount)
 signal max_health(amount)
-export var hp = 100
+signal mp(amount)
+signal max_mp(amount)
+var hp = 100
+var mp = 100
+export var mp_damage = 10
+var filling: bool = false
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):
@@ -48,6 +53,10 @@ func _physics_process(delta: float) -> void:
 	position = position.round()
 
 func shoot() -> void:
+	if filling:
+		return
+	mp -= mp_damage
+	emit_signal("mp", mp)
 	var _v = v[dir]
 	var bullet = bullet_scene.instance()
 	#var lvl = get_tree().get_root().get_node"BLevelTemp)
@@ -55,9 +64,28 @@ func shoot() -> void:
 	bullet.set_as_toplevel(true)
 	bullet.position = position
 	add_child(bullet)
+	
+	if mp < 10:
+		fill_mp()
+
+func fill_mp():
+	$'UI/mp-note'.visible = true
+	filling = true
+	
+	var t = Timer.new()
+	t.set_wait_time(5)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
+	
+	mp = 100
+	emit_signal('max_mp', 100)
+	$'UI/mp-note'.visible = false
+	filling = false
 
 func _on_EnemyDetector_body_entered(body: Node) -> void:
-	print(body.filename)
 	for enemy in ["Snake.tscn", "Dragon.tscn", "EnemyBullet.tscn"]:
 		if body.filename.ends_with(enemy):
 			hit(body)
@@ -82,7 +110,9 @@ func _on_PieceDetector_body_entered(body: Node) -> void:
 	if body.filename.ends_with('Apple.tscn'):
 		print(body.filename)
 		hp = 100
+		mp = 100
 		body.queue_free()
 		$SFX/pickup.play()
 		$SFX/pulse.stop()
 		emit_signal('max_health', 100)
+		emit_signal('max_mp', 100)

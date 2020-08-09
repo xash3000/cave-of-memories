@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Monsters/Snake.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Monsters/Dragon.tscn" type="PackedScene" id=3]
 
 [node name="DemoScene" type="Node2D"]
 
@@ -18,7 +18,7 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 40, 144 )
 
-[node name="Snake" parent="." instance=ExtResource( 3 )]
-position = Vector2( 208, 96 )
-collision_mask = 10
-v = Vector2( 0, 1 )
+[node name="Dragon" parent="." instance=ExtResource( 3 )]
+position = Vector2( 384, 96 )
+v = Vector2( 0, 0 )
+bullet_timer = 1.0
