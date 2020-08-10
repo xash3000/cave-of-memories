@@ -16,6 +16,7 @@ collision_layer = 2147483652
 collision_mask = 2
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_vertical_guides_": [ 24.0, 16.0 ]
 }
 

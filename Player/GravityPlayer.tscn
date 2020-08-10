@@ -4,13 +4,13 @@
 [ext_resource path="res://Player/GravityPlayer.gd" type="Script" id=2]
 [ext_resource path="res://Assets/UI/left-pressed.png" type="Texture" id=3]
 [ext_resource path="res://Assets/UI/up-pressed.png" type="Texture" id=4]
+[ext_resource path="res://Assets/SFX/hollow.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Assets/UI/left-normal.png" type="Texture" id=7]
 [ext_resource path="res://Assets/UI/up-normal.png" type="Texture" id=8]
 [ext_resource path="res://Assets/UI/right-pressed.png" type="Texture" id=9]
 [ext_resource path="res://Assets/UI/right-normal.png" type="Texture" id=10]
 [ext_resource path="res://Assets/UI/fire-pressed.png" type="Texture" id=11]
 [ext_resource path="res://Assets/UI/fire-normal.png" type="Texture" id=12]
-[ext_resource path="res://Assets/SFX/desert-music.ogg" type="AudioStream" id=13]
 [ext_resource path="res://Assets/SFX/pickup.wav" type="AudioStream" id=14]
 [ext_resource path="res://Player/HealthBar.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/SFX/hurt.wav" type="AudioStream" id=16]
@@ -142,62 +142,62 @@ region = Rect2( 168, 32, 24, 32 )
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 96, 24, 32 )
+region = Rect2( 0, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 24, 32 )
+region = Rect2( 24, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 32 )
+region = Rect2( 48, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 24, 0, 24, 32 )
+region = Rect2( 72, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 24, 32 )
+region = Rect2( 96, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 72, 0, 24, 32 )
+region = Rect2( 120, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 24, 32 )
+region = Rect2( 144, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 120, 0, 24, 32 )
+region = Rect2( 168, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 24, 32 )
+region = Rect2( 0, 96, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 168, 0, 24, 32 )
+region = Rect2( 0, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 32, 24, 32 )
+region = Rect2( 0, 64, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 32 )
+region = Rect2( 0, 32, 24, 32 )
 
 [sub_resource type="SpriteFrames" id=37]
 animations = [ {
@@ -216,29 +216,29 @@ animations = [ {
 "name": "up",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 25 ) ],
-"loop": false,
-"name": "idle-right",
-"speed": 0.0
-}, {
-"frames": [ SubResource( 26 ) ],
-"loop": false,
-"name": "idle-left",
-"speed": 0.0
-}, {
-"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
 "name": "down",
 "speed": 12.0
 }, {
+"frames": [ SubResource( 33 ) ],
+"loop": false,
+"name": "idle-right",
+"speed": 0.0
+}, {
+"frames": [ SubResource( 34 ) ],
+"loop": false,
+"name": "idle-down",
+"speed": 0.0
+}, {
 "frames": [ SubResource( 35 ) ],
 "loop": false,
-"name": "idle-up",
+"name": "idle-left",
 "speed": 0.0
 }, {
 "frames": [ SubResource( 36 ) ],
 "loop": false,
-"name": "idle-down",
+"name": "idle-up",
 "speed": 0.0
 } ]
 
@@ -255,6 +255,13 @@ extents = Vector2( 8, 16 )
 collision_layer = 65
 collision_mask = 2
 script = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 4.76837e-06, 1.52588e-05 )
+scale = Vector2( 1.65625, 0.9375 )
+texture = ExtResource( 18 )
+color = Color( 0.980392, 0.964706, 0.964706, 1 )
+mode = 3
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 37 )
@@ -292,7 +299,7 @@ rect_scale = Vector2( 7.09649, 5.17253 )
 will_pluse = true
 
 [node name="up-btn" type="TouchScreenButton" parent="UI"]
-position = Vector2( 984, 424 )
+position = Vector2( 976, 424 )
 scale = Vector2( 1.5, 1.5 )
 normal = ExtResource( 8 )
 pressed = ExtResource( 4 )
@@ -313,7 +320,7 @@ pressed = ExtResource( 9 )
 action = "ui_right"
 
 [node name="fire-btn" type="TouchScreenButton" parent="UI"]
-position = Vector2( 1128, 472 )
+position = Vector2( 1120, 512 )
 scale = Vector2( 1.5, 1.5 )
 normal = ExtResource( 12 )
 pressed = ExtResource( 11 )
@@ -345,7 +352,7 @@ stream = ExtResource( 14 )
 volume_db = 10.0
 
 [node name="main_music" type="AudioStreamPlayer2D" parent="SFX"]
-stream = ExtResource( 13 )
+stream = ExtResource( 5 )
 autoplay = true
 
 [node name="hurt" type="AudioStreamPlayer2D" parent="SFX"]
@@ -363,12 +370,6 @@ margin_top = -24.0
 margin_right = -16.0
 margin_bottom = -24.0
 will_pluse = true
-
-[node name="Light2D" type="Light2D" parent="."]
-visible = false
-scale = Vector2( 1.8, 1 )
-texture = ExtResource( 18 )
-mode = 3
 [connection signal="health" from="." to="UI/HealthBar" method="_on_health_update"]
 [connection signal="health" from="." to="HealthBar" method="_on_health_update"]
 [connection signal="max_health" from="." to="UI/HealthBar" method="_on_max_health"]

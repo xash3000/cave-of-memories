@@ -374,7 +374,6 @@ visible = false
 position = Vector2( 144, 368 )
 
 [node name="torches" type="Node2D" parent="."]
-visible = false
 
 [node name="Torch" parent="torches" instance=ExtResource( 18 )]
 position = Vector2( 528, 1128 )

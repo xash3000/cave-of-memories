@@ -6,7 +6,7 @@ extends KinematicBody2D
 export var gravity = 1000
 onready var anim = $AnimatedSprite
 onready var bullet_scene = preload('res://Bullet/Bullet.tscn')
-export var speed = Vector2(300, 450)
+export var speed = Vector2(350, 450)
 var velocity = Vector2.ZERO
 export var dir = 'right'
 var v = {

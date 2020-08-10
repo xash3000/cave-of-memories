@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		dir = 'up'
 	elif Input.is_action_pressed('ui_down'):
 		velocity.x = 0
-		velocity = speed
+		velocity.y = speed
 		anim.play('down')
 		dir = 'down'
 	else:

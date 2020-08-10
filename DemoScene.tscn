@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Monsters/Dragon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Monsters/Snake.tscn" type="PackedScene" id=4]
 
 [node name="DemoScene" type="Node2D"]
 
@@ -21,4 +22,6 @@ position = Vector2( 40, 144 )
 [node name="Dragon" parent="." instance=ExtResource( 3 )]
 position = Vector2( 384, 96 )
 v = Vector2( 0, 0 )
-bullet_timer = 1.0
+
+[node name="Snake" parent="." instance=ExtResource( 4 )]
+position = Vector2( 160, 136 )
