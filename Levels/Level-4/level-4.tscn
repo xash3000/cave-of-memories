@@ -75,7 +75,7 @@ __meta__ = {
 }
 
 [node name="UI" type="CanvasLayer" parent="."]
-layer = 0
+layer = 2
 
 [node name="p1" type="TextureRect" parent="UI"]
 visible = false
