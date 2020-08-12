@@ -30,6 +30,7 @@ volume_db = 1.0
 autoplay = true
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 texture = ExtResource( 4 )
 color = Color( 1, 0.388235, 0.0235294, 1 )
 energy = 0.7
