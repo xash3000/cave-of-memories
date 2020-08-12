@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cave Of Memories"
-run/main_scene="res://Levels/Intro.tscn"
+run/main_scene="res://Levels/Level-5/level-5.tscn"
 config/icon="res://icon.png"
 
 [debug]

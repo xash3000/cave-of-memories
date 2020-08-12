@@ -142,62 +142,62 @@ region = Rect2( 168, 32, 24, 32 )
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 32 )
+region = Rect2( 0, 32, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 24, 0, 24, 32 )
+region = Rect2( 0, 64, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 24, 32 )
+region = Rect2( 0, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 72, 0, 24, 32 )
+region = Rect2( 24, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 24, 32 )
+region = Rect2( 48, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 120, 0, 24, 32 )
+region = Rect2( 72, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 24, 32 )
+region = Rect2( 96, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 168, 0, 24, 32 )
+region = Rect2( 120, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 96, 24, 32 )
+region = Rect2( 144, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 32 )
+region = Rect2( 168, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 24, 32 )
+region = Rect2( 0, 0, 24, 32 )
 
 [sub_resource type="AtlasTexture" id=36]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 32, 24, 32 )
+region = Rect2( 0, 96, 24, 32 )
 
 [sub_resource type="SpriteFrames" id=37]
 animations = [ {
@@ -216,29 +216,29 @@ animations = [ {
 "name": "up",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
-"loop": true,
-"name": "down",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 33 ) ],
+"frames": [ SubResource( 25 ) ],
 "loop": false,
-"name": "idle-right",
+"name": "idle-up",
 "speed": 0.0
 }, {
-"frames": [ SubResource( 34 ) ],
-"loop": false,
-"name": "idle-down",
-"speed": 0.0
-}, {
-"frames": [ SubResource( 35 ) ],
+"frames": [ SubResource( 26 ) ],
 "loop": false,
 "name": "idle-left",
 "speed": 0.0
 }, {
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
+"loop": true,
+"name": "down",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 35 ) ],
+"loop": false,
+"name": "idle-down",
+"speed": 0.0
+}, {
 "frames": [ SubResource( 36 ) ],
 "loop": false,
-"name": "idle-up",
+"name": "idle-right",
 "speed": 0.0
 } ]
 
@@ -257,6 +257,7 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 position = Vector2( 4.76837e-06, 1.52588e-05 )
 scale = Vector2( 1.65625, 0.9375 )
 texture = ExtResource( 18 )

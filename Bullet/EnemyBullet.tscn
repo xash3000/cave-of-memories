@@ -31,4 +31,5 @@ autoplay = true
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 4 )
+color = Color( 0.0823529, 0.603922, 0.113725, 1 )
 energy = 0.6

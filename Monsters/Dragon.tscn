@@ -46,7 +46,6 @@ autostart = true
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 position = Vector2( -4.76837e-07, 1.43051e-06 )
 scale = Vector2( 1.6, -1.6 )
-physics_process_parent = true
 [connection signal="health" from="." to="HealthBar" method="_on_health_update"]
 [connection signal="body_shape_entered" from="BulletDetector" to="." method="_on_BulletDetector_body_entered"]
 [connection signal="timeout" from="BulletTimer" to="." method="_on_BulletTimer_timeout"]
