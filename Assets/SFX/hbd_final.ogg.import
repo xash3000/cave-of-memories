@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hbd_final.ogg-f4d98020346f3eb5d9e9b23f14d1e2dc.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/hbd_final.ogg"
+dest_files=[ "res://.import/hbd_final.ogg-f4d98020346f3eb5d9e9b23f14d1e2dc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
