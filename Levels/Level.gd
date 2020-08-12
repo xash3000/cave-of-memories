@@ -2,6 +2,19 @@ extends Node2D
 
 var collected = 0
 export var next_scene: PackedScene
+var save_path = "user://save.txt"
+
+func _ready() -> void:
+	var data = {
+		"last_scene": get_tree().current_scene.filename
+	}
+	
+	var file = File.new()
+	var error = file.open(save_path, File.WRITE)
+	
+	if error == OK:
+		file.store_var(data)
+		file.close()
 
 func _on_Player_piece(id) -> void:
 	get_node('UI/p' + id).visible = true

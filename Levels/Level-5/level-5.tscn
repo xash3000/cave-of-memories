@@ -245,19 +245,19 @@ bullet_timer = 0.8
 position = Vector2( 5200, 496 )
 speed = 210
 v = Vector2( 0, 1 )
-bullet_timer = 0.8
+bullet_timer = 1.5
 
 [node name="Dragon5" parent="Monsters" instance=ExtResource( 4 )]
 position = Vector2( 5160, 456 )
 speed = 210
 v = Vector2( 0, 1 )
-bullet_timer = 0.8
+bullet_timer = 1.5
 
 [node name="Dragon6" parent="Monsters" instance=ExtResource( 4 )]
 position = Vector2( 5224, 416 )
 speed = 210
 v = Vector2( 0, 1 )
-bullet_timer = 0.8
+bullet_timer = 1.5
 
 [node name="Snake" parent="Monsters" instance=ExtResource( 8 )]
 position = Vector2( 1768, 496 )
@@ -358,6 +358,9 @@ position = Vector2( 1192, 400 )
 
 [node name="Apple3" parent="Apples" instance=ExtResource( 17 )]
 position = Vector2( 3288, 46.9413 )
+
+[node name="Apple4" parent="Apples" instance=ExtResource( 17 )]
+position = Vector2( 5096, 496 )
 
 [node name="NextLevelDoor" type="Area2D" parent="."]
 position = Vector2( 5704, 488 )
