@@ -70,7 +70,12 @@ margin_right = 1133.0
 margin_bottom = 407.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "\"Happy birthday Moneeb <3\"
+text = "\"Happy birthday Moneeb <3
+
+May all your wishes come true, and the next
+year be nice and sweet just as you are.
+
+I hope you enjoyed the game XD\"
 
 - Ali"
 __meta__ = {

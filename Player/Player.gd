@@ -116,3 +116,5 @@ func _on_PieceDetector_body_entered(body: Node) -> void:
 		$SFX/pulse.stop()
 		emit_signal('max_health', 100)
 		emit_signal('max_mp', 100)
+		$'UI/mp-note'.visible = false
+		filling = false
