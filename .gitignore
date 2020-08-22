@@ -18,6 +18,4 @@ data_*/
 
 # End of https://www.toptal.com/developers/gitignore/api/godot
 
-*.apk
-Assets/Pieces/*
 android/
