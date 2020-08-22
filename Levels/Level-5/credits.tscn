@@ -63,10 +63,10 @@ position = Vector2( 840, 592 )
 normal = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 212.0
-margin_top = 132.0
-margin_right = 598.0
-margin_bottom = 669.0
+margin_left = 208.0
+margin_top = 112.0
+margin_right = 594.0
+margin_bottom = 694.0
 rect_scale = Vector2( 1, 0.92 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -74,7 +74,8 @@ text = " - programming:
       Ali and his cat
 	
 - Beta testing:
-		     Randa Harbi
+		     - Randa Harbi
+			     - Mazza Ibrahim
 
 - music from kingdom
 hearts (Agrabah and
